@@ -38,3 +38,5 @@ src/main/resources
 
 ### Ignore node_modules in frontend ###
 frontend/node_modules/
+
+frontend/src/environments
