@@ -1,0 +1,63 @@
+<table class="recipe-table">
+  <tr>
+    <!-- Recipe Details Column -->
+    <td class="recipe-details">
+      <h2 class="recipe-title">
+        <i class="fas fa-utensils"></i> {{ recipe?.nom }}
+      </h2>
+      <p class="recipe-description">
+        {{ recipe?.description }}
+      </p>
+
+      <!-- Instructions List -->
+      <h3 class="section-title">Instructions</h3>
+      <ul class="styled-list">
+        <li *ngFor="let step of getInstructionsList()">
+          <i class="fas fa-check-circle"></i> {{ step }}
+        </li>
+      </ul>
+
+      <!-- Recipe Details -->
+      <h3 class="section-title">Détails</h3>
+      <ul class="styled-list">
+        <li>
+          <i class="fas fa-clock"></i> Temps de préparation: <strong>{{ recipe?.temps_preparation }} min</strong>
+        </li>
+        <li>
+          <i class="fas fa-star"></i> Note: <strong>{{ recipe?.note }}/5</strong>
+        </li>
+      </ul>
+
+      <!-- Category and Type -->
+      <h3 class="section-title">Informations</h3>
+      <ul class="styled-list">
+        <li>
+          <i class="fas fa-tag"></i> Catégorie: <strong>{{ categorie?.nom }}</strong>
+        </li>
+        <li>
+          <i class="fas fa-clipboard"></i> Type: <strong>{{ categorie?.type }}</strong>
+        </li>
+      </ul>
+
+
+
+      <button class="btn-primary" [routerLink]="['/recipes']">
+        <i class="fas fa-arrow-left"></i> Retour aux Recettes
+      </button>
+    </td>
+
+    <!-- Recipe Image Column -->
+    <td class="recipe-image-container">
+      <img class="recipe-image" [src]="recipe?.image" alt="{{ recipe?.nom }}">
+      <!-- Ingredients Card -->
+      <div class="ingredients-card">
+        <h3 class="section-title">Ingrédients</h3>
+        <ul class="ingredients-list">
+          <li *ngFor="let ingredient of ingredients">
+            <i class="fas fa-carrot"></i> <span class="ingredient-name">{{ ingredient.nom }}</span>- <strong>{{ ingredient.quantite }}</strong>
+          </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,123 @@
+
+
+/* 🍃 Conteneur principal */
+.container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(58, 125, 68, 0.3);
+
+
+  border-top: 4px solid #3A7D44;
+  border-right: 2px solid #3A7D44;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🌟 Titre */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2C5E33;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+/* 🌟 Conteneur des champs de formulaire avec Flexbox */
+.form-group {
+  display: flex;
+  flex-direction: column; /* Les éléments seront empilés verticalement */
+  align-items: flex-start; /* Les éléments seront alignés au début (gauche) */
+  justify-content: center; /* Aligner au centre verticalement */
+  margin-bottom: 20px;
+  position: relative; /* Nécessaire pour le positionnement absolu du label */
+}
+
+/* 🍃 Label au centre du niveau de l'input */
+.form-label {
+
+  padding-left: 5px;
+  font-family:Georgia;
+  transform: translateY(-50%); /* Centrer verticalement par rapport au champ */
+  font-weight: 600;
+  color: #2C5E33;
+
+
+  font-size: 18px;
+  transition: all 0.2s ease-in-out; /* Ajoute une transition douce */
+}
+
+/* 🍃 Input et Select */
+.form-control, .form-select {
+  width: 96%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #A3D9A5;
+  border-radius: 8px;
+  background: #F0F8F1;
+  transition: 0.3s ease-in-out;
+  margin-top: 5px;
+  margin-bottom: 8px;/* Espacement entre le label et le champ */
+  padding-left: 10px; /* Ajouter un padding pour ne pas que le texte touche le bord */
+  position: relative;
+}
+
+/* 🍃 Focus sur les inputs */
+.form-control:focus, .form-select:focus {
+  border-color: #3A7D44;
+  box-shadow: 0px 4px 10px rgba(58, 125, 68, 0.4);
+  background: white;
+  outline: none;
+}
+
+
+/* 📂 File Input */
+input[type="file"] {
+  padding: 12px;
+  border: none;
+  background: #5DA25D;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+  background: #3A7D44;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 Bouton principal */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3A7D44, #5DA25D);
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1.5px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2C5E33, #4C8B4C);
+  transform: scale(1.03);
+  box-shadow: 0px 5px 15px rgba(58, 125, 68, 0.3);
+}
+
+/* 📏 Espacement */
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+/* 💡 Ajout d’une légère animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

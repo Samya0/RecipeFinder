@@ -1,0 +1,16 @@
+<div class="navbar-container">
+  <nav class="navbar">
+    <div class="navbar-title">
+      <h1>{{ title }} 🌶️ </h1>  <!-- Display the title dynamically -->
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/recipes" class="navbar-link">Recipes</a>
+      <a routerLink="/recipes/add" class="navbar-link">Add Recipe</a>
+      <a routerLink="/categories" class="navbar-link">Categories</a>
+      <a routerLink="/ingredients" class="navbar-link">Ingredients</a>
+<!--      <a routerLink="/users/add" class="navbar-link">Add User</a>-->
+      <a routerLink="/login" class="navbar-link">Login</a>
+    </div>
+  </nav>
+  <router-outlet></router-outlet> <!-- Placeholder for routing content -->
+</div>

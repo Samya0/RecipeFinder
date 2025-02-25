@@ -1,0 +1,21 @@
+
+
+
+<!-- Recipes List -->
+<div class="container">
+  <ul class="list-group">
+    <li *ngFor="let recipe of recipes" class="list-group-item d-flex align-items-center p-3">
+
+      <!-- Recipe Image -->
+      <img *ngIf="recipe.image" [src]="recipe.image" alt="{{ recipe.nom }}" class="rounded shadow img-thumbnail me-3" width="300" height="250">
+
+      <!-- Recipe Details -->
+      <div>
+        <h3 class="text-primary">{{ recipe.nom }}</h3>
+        <p class="text-muted">{{ recipe.description }}</p>
+        <button class="btn btn-outline-secondary" [routerLink]="['/recipes', recipe.id]">View Details</button>
+      </div>
+
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,52 @@
+.categorie-list {
+  margin-top:50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #3A7D44;
+  font-family: "Grechen Fuemen", serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.categorie-nom{
+  font-family: "Grechen Fuemen", serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.categorie-type{
+  font-family: "Grechen Fuemen", serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.categorie-link {
+  display: block;
+  padding: 10px;
+  background-color: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.categorie-link:hover {
+  background-color: #e68900;
+}

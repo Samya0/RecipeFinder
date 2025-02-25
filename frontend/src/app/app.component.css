@@ -1,0 +1,81 @@
+/* General Styles for Navbar */
+.navbar-container {
+  width: 100%;
+  justify-content: center;
+  background-color: #4F9457; /* Green color */
+  padding: 15px 0; /* Increased padding for better spacing */
+  height: 55px; /* Slightly increased height */
+  border-radius: 8px; /* Rounded corners for the navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  margin-bottom: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Limit max-width for better layout on large screens */
+  margin: 0 auto; /* Center the navbar */
+  padding: 0 20px; /* Add padding on left and right */
+}
+
+/* Site Title (Logo) Styling */
+.navbar-title h1 {
+  color: #F5F1E3;
+  text-shadow: 1px 1px 1px red;
+  font-family: "Grechen Fuemen", serif;
+  font-size: 30px; /* Slightly larger font size */
+  font-weight: bolder; /* Bolder font */
+  margin: 0;
+  letter-spacing: 3px; /* Letter spacing for a clean look */
+  text-align: center;
+}
+
+
+/* Navbar Links Container */
+.navbar-links {
+  display: flex;
+}
+
+/* Individual Navbar Links Styling */
+.navbar-link {
+  margin: 0 15px; /* Spacing between links */
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+
+  padding: 8px 15px; /* Padding for clickable areas */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  letter-spacing: 1.5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Link Hover Effect */
+.navbar-link:hover {
+  background-color: #5DA25D; /* Lighter green on hover */
+  color: white; /* Keep text white on hover */
+  text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 15px;
+
+  }
+
+  .navbar-link {
+    margin: 8px 0; /* Add vertical spacing between links */
+  }
+}

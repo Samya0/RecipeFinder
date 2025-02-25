@@ -1,0 +1,46 @@
+<div class="container">
+  <h2>Créer une Nouvelle Recette</h2>
+  <form (ngSubmit)="saveRecipe()">
+
+    <!-- Nom de la recette -->
+    <div class="form-group">
+      <label for="nom" class="form-label">Nom de la recette</label>
+      <input type="text" class="form-control" id="nom" [(ngModel)]="recipe.nom" name="nom" required>
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" rows="3" [(ngModel)]="recipe.description" name="description" required></textarea>
+    </div>
+
+    <!-- Instructions -->
+    <div class="form-group">
+      <label for="instructions" class="form-label">Instructions</label>
+      <textarea class="form-control" id="instructions" rows="4" [(ngModel)]="recipe.instructions" name="instructions" required></textarea>
+    </div>
+
+    <!-- Temps de préparation -->
+    <div class="form-group">
+      <label for="temps" class="form-label">Temps de préparation (minutes)</label>
+      <input type="number" class="form-control" id="temps" [(ngModel)]="recipe.temps_preparation" name="temps_preparation" required>
+    </div>
+
+    <!-- Catégorie -->
+    <div class="form-group">
+      <label for="categorie" class="form-label">Catégorie</label>
+      <select class="form-select" id="categorie" [(ngModel)]="recipe.categorie_id" name="categorie_id" required>
+        <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+      </select>
+    </div>
+
+    <!-- Image -->
+    <div class="form-group">
+      <label class="form-label">Image de la recette</label>
+      <input type="file" (change)="onFileSelected($event)" class="form-control">
+    </div>
+
+    <!-- Bouton -->
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+</div>

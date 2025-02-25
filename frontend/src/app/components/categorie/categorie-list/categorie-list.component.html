@@ -1,0 +1,10 @@
+<div class="categorie-list">
+  <h2>Choose your categorie</h2>
+  <ul>
+    <li *ngFor="let categorie of categories">
+      <a [routerLink]="['/categories', categorie.id, 'recipes']" class="categorie-link">
+        <span class="categorie-nom">{{ categorie.nom }}</span> - <span class="categorie-type">{{ categorie.type }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
